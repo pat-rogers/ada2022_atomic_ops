@@ -1,0 +1,41 @@
+--  This project supplies the Ada 2022 language-defined units for atomic
+--  operations: System.Atomic_Operations, System.Atomic_Operations.Exchange,
+--  and System.Atomic_Operations.Modular_Arithmetic.
+--
+--  GNAT implements these units (see the GNAT RM, "Implementation of Ada 2022
+--  Features", AI12-0234 and AI12-0364), and they are present in the native
+--  runtime, but they are absent from the arm-elf BB runtimes (there's no
+--  technical reason to exclude them). The sources here are verbatim copies
+--  taken from the native runtime.
+--
+--  They are compiled with -gnatg because a compilation unit that is a child
+--  of System is otherwise rejected in normal mode. -gnatg is confined to this
+--  project, so it does not affect any application sources.
+
+project Ada2022_atomic_ops is
+
+   for Languages use ("Ada");
+
+   for Target use "arm-eabi";                          -- whatever
+   for Runtime ("Ada") use "embedded-stm32f746disco";  -- whatever
+
+   for Source_Dirs use ("src");
+
+   for Object_Dir use "obj";
+
+   Unconditional_Compiler_Switches :=
+      ("-gnatg",      -- GNAT mode: required to declare a child of System
+       "-gnat2022",
+       "-O3",
+       "-ffunction-sections",
+       "-fdata-sections");
+
+   package Compiler is
+      for Switches ("ada") use Unconditional_Compiler_Switches;
+   end Compiler;
+
+   package Clean is
+      for Artifacts_In_Object_Dir use ("*.*");
+   end Clean;
+
+end Ada2022_atomic_ops;
