@@ -1,6 +1,7 @@
 --  This project supplies the Ada 2022 language-defined units for atomic
 --  operations: System.Atomic_Operations, System.Atomic_Operations.Exchange,
---  and System.Atomic_Operations.Modular_Arithmetic.
+--  System.Atomic_Operations.Modular_Arithmetic, and 
+--  System.Atomic_Operations.Integer_Arithmetic.
 --
 --  GNAT implements these units (see the GNAT RM, "Implementation of Ada 2022
 --  Features", AI12-0234 and AI12-0364), and they are present in the native
