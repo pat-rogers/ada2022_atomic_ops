@@ -1,4 +1,4 @@
-name = "ada22_atomic_ops"
+name = "standard_atomic_ops"
 version = "1.0.0"
 description = "Language-defined atomic operation packages for GNAT runtimes."
 long-description = """
@@ -16,7 +16,7 @@ maintainers-logins = [
 ]
 website = ""
 project-files = [
-"ada2022_atomic_ops.gpr",
+"standard_atomic_ops.gpr",
 ]
 tags = [
 "atomic",

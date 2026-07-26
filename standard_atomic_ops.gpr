@@ -1,19 +1,18 @@
---  This project supplies the Ada 2022 language-defined units for atomic
+--  This project supplies the Ada language-defined units for atomic
 --  operations: System.Atomic_Operations, System.Atomic_Operations.Exchange,
 --  System.Atomic_Operations.Modular_Arithmetic, and 
 --  System.Atomic_Operations.Integer_Arithmetic.
 --
 --  GNAT implements these units (see the GNAT RM, "Implementation of Ada 2022
 --  Features", AI12-0234 and AI12-0364), and they are present in the native
---  runtime, but they are absent from the arm-elf BB runtimes (there's no
---  technical reason to exclude them). The sources here are verbatim copies
---  taken from the native runtime.
+--  runtime, but they are absent from the arm-elf BB runtimes. The sources 
+--  provided here are verbatim copies taken from the native runtime.
 --
 --  They are compiled with -gnatg because a compilation unit that is a child
 --  of System is otherwise rejected in normal mode. -gnatg is confined to this
 --  project, so it does not affect any application sources.
 
-project Ada2022_atomic_ops is
+project standard_atomic_ops is
 
    for Languages use ("Ada");
 
@@ -39,4 +38,4 @@ project Ada2022_atomic_ops is
       for Artifacts_In_Object_Dir use ("*.*");
    end Clean;
 
-end Ada2022_atomic_ops;
+end standard_atomic_ops;
