@@ -16,7 +16,7 @@ maintainers-logins = [
 ]
 website = ""
 project-files = [
-"ada22_atomic_ops.gpr",
+"ada2022_atomic_ops.gpr",
 ]
 tags = [
 "atomic",
