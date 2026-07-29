@@ -22,5 +22,3 @@ tags = [
 "atomic",
 "standard",
 ]
-[[depends-on]]
-gnat_arm_elf = "*"
