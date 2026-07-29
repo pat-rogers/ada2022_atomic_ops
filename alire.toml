@@ -21,4 +21,5 @@ project-files = [
 tags = [
 "atomic",
 "standard",
+"runtime"
 ]
