@@ -16,8 +16,8 @@ project standard_atomic_ops is
 
    for Languages use ("Ada");
 
-   for Target use "arm-eabi";                          -- whatever
-   for Runtime ("Ada") use "embedded-stm32f746disco";  -- whatever
+   --  Target and Runtime are intentionally unspecified; the root project of
+   --  any build supplies both.
 
    for Source_Dirs use ("src");
 
