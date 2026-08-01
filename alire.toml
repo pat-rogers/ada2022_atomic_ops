@@ -14,7 +14,7 @@ maintainers = ["Pat Rogers <progers@classwide.com>"]
 maintainers-logins = [
 "pat-rogers",
 ]
-website = ""
+website = "https://github.com/pat-rogers/standard_atomic_ops"
 project-files = [
 "standard_atomic_ops.gpr",
 ]
